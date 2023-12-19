@@ -1,7 +1,6 @@
 import 'package:task/pages/splash/data/splash_repository.dart';
 import 'package:task/routes/app_pages.dart';
 import 'package:task/services/auth_service.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 class SplashController extends SuperController<dynamic> {

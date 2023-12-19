@@ -1,6 +1,3 @@
-import 'dart:async';
-
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,7 +6,6 @@ import 'package:task/consts/colors.dart';
 import 'package:task/consts/text_styles.dart';
 import 'package:task/pages/home/presentation/controllers/home_controller.dart';
 import 'package:task/resources/strings_generated.dart';
-import 'package:task/routes/app_pages.dart';
 import 'package:task/services/auth_service.dart';
 import 'package:task/widgets/custom_text.dart';
 

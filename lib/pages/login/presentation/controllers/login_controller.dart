@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:task/consts/colors.dart';
 import 'package:task/pages/login/data/login_repository.dart';
 import 'package:task/resources/strings_generated.dart';
 import 'package:task/routes/app_pages.dart';

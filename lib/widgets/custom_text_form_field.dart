@@ -7,7 +7,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task/consts/colors.dart';
 import 'package:task/consts/text_styles.dart';
-import 'package:task/resources/assets_svg_generated.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final TextInputType inputType;

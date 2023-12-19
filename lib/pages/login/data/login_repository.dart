@@ -1,6 +1,5 @@
 import 'package:task/base/base_repositroy.dart';
 import 'package:task/pages/login/model/login_model.dart';
-import 'package:task/resources/strings_generated.dart';
 import 'login_api_provider.dart';
 
 abstract class ILoginRepository {

@@ -1,5 +1,3 @@
-import 'package:task/resources/assets_generated.dart';
-
 class StorageKeys {
   static const userDataBox = "userData";
   static const userDataKey = "userData";

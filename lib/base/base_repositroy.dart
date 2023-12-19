@@ -1,9 +1,5 @@
-import 'dart:convert';
-
 import 'package:task/consts/colors.dart';
 import 'package:task/widgets/custom_snackbar.dart';
-
-import 'api_error_response.dart';
 
 class BaseRepository {
   String getErrorMessage(String apiResponse) {

@@ -1,11 +1,7 @@
 import 'dart:async';
-import 'dart:math';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 import 'package:task/pages/home/data/home_repository.dart';
 import 'package:task/services/auth_service.dart';
 import 'package:task/shared/utils.dart';

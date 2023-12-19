@@ -1,0 +1,1 @@
+extension ColorExtension on String {}

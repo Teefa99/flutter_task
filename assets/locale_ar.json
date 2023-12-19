@@ -1,0 +1,12 @@
+{
+  "login" : "تسجيل الدخول",
+  "himam" : "Himam",
+  "drive" : "Drive",
+  "phone_number" : "رقم الهاتف",
+  "password": "كلمه المرور",
+  "wrong_number" : "رقم الهاتف غير صحيح",
+  "wrong_data" : "رقم الهاتف او كلمة المرور غير صحيحة",
+  "req_field": "هذا الحقل مطلوب",
+  "valid_password": "ادخل كلمة مرور صحيحة",
+  "home": "الرئيسية"
+}

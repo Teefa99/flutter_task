@@ -1,0 +1,13 @@
+{
+    "login" : "Log in",
+    "himam" : "Himam",
+    "drive" : "Drive",
+    "phone_number" : "Phone Number",
+    "password": "Password",
+    "forgot_password" : "Forgot Your Password?",
+    "wrong_number" : "Wrong Phone Number",
+    "wrong_data" : "Wrong phone number or password",
+    "req_field": "this field is required",
+    "valid_password": "Enter valid password",
+    "home": "Home"
+}

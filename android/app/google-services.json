@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "120259459105",
+    "project_id": "task-ec6bf",
+    "storage_bucket": "task-ec6bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120259459105:android:5c22d42ae2261a35374b60",
+        "android_client_info": {
+          "package_name": "com.firebase.task"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXwlr34khXCrrGFnTceilzFDSTOUqLIEA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

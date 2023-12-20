@@ -12,7 +12,7 @@ class AuthService extends GetxService {
   final isLoggedIn = false.obs;
   final isSelectedLanguage = false.obs;
   LoginModel? userInfo;
-  String? language = "en";
+  String? language = Get.deviceLocale!.languageCode;
   bool get isLoggedInValue => isLoggedIn.value;
 
   @override

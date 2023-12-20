@@ -22,6 +22,7 @@ class HomeView extends GetView<HomeController> {
             onPressed: () {
               AuthService.to.logout();
               controller.timer!.cancel();
+              controller.rtdbTimer!.cancel();
             },
             icon: const Icon(
               Icons.logout,

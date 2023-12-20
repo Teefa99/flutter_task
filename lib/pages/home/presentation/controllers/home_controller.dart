@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:get/get.dart';
 import 'package:task/pages/home/data/home_repository.dart';
 import 'package:task/services/auth_service.dart';
@@ -12,6 +13,7 @@ class HomeController extends SuperController<bool> {
 
   final IHomeRepository homeRepository;
   Timer? timer;
+  Timer? rtdbTimer;
   late LatLng currentPosition;
   List<Marker> markerList = [];
   RxBool gettingLocation = false.obs;
@@ -57,6 +59,7 @@ class HomeController extends SuperController<bool> {
       currentPosition = LatLng(value.latitude, value.longitude);
       gettingLocation.value = false;
       saveLocationInFirebase();
+      saveLocationInRealTimeDatabase();
       update();
     });
     gettingLocation.value = false;
@@ -71,6 +74,23 @@ class HomeController extends SuperController<bool> {
     timer = Timer.periodic(const Duration(seconds: 5), (timer) {
       updateCurrentPosition();
       userLocation.doc(AuthService.to.userInfo?.data?.usersID).set({
+        'lat': currentPosition.latitude,
+        'lng': currentPosition.longitude
+      }).then((value) {
+        print(AuthService.to.userInfo?.data?.usersID);
+        print("userAdded");
+      }).catchError((error) {
+        print("Failed to add user: $error");
+      });
+    });
+  }
+
+  saveLocationInRealTimeDatabase() {
+    DatabaseReference userLocation =
+        FirebaseDatabase.instance.ref().child("location");
+    rtdbTimer = Timer.periodic(const Duration(seconds: 5), (timer) {
+      updateCurrentPosition();
+      userLocation.child(AuthService.to.userInfo?.data?.usersID ?? "3").set({
         'lat': currentPosition.latitude,
         'lng': currentPosition.longitude
       }).then((value) {

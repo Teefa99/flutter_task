@@ -26,6 +26,15 @@ class LoginController extends SuperController<bool> {
     change(null, status: RxStatus.success());
   }
 
+  changeLanguage() {
+    if (AuthService.to.language == "en") {
+      AuthService.to.selectLanguage("ar");
+    } else {
+      AuthService.to.selectLanguage("en");
+    }
+    update();
+  }
+
   bool loginLoading = false;
   onLoginClicked(String phone) async {
     loginLoading = true;

@@ -42,6 +42,14 @@ class HomeController extends SuperController<bool> {
     change(null, status: RxStatus.success());
   }
 
+  updateCurrentPosition() async {
+    await determinePosition().then((value) {
+      currentPosition = LatLng(value.latitude, value.longitude);
+      gettingLocation.value = false;
+      update();
+    });
+  }
+
   getCurrentLocation() async {
     gettingLocation.value = true;
     update();
@@ -60,7 +68,8 @@ class HomeController extends SuperController<bool> {
   saveLocationInFirebase() {
     CollectionReference userLocation =
         FirebaseFirestore.instance.collection('location');
-    timer = Timer.periodic(const Duration(seconds: 10), (timer) {
+    timer = Timer.periodic(const Duration(seconds: 5), (timer) {
+      updateCurrentPosition();
       userLocation.doc(AuthService.to.userInfo?.data?.usersID).set({
         'lat': currentPosition.latitude,
         'lng': currentPosition.longitude

@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
           getPages: AppPages.routes,
           initialRoute: AppPages.INITIAL,
           fallbackLocale: TranslationService.fallbackLocale,
-          locale: Locale(AuthService.to.language.toString()),
+          locale: Get.deviceLocale,
           supportedLocales: const [Locale('en', ''), Locale('en', '')],
           translations: TranslationService(),
           localizationsDelegates: const [
